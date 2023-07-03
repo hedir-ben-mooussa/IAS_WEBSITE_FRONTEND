@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/shared/home/home.component';
 import { NotfoundComponent } from './components/shared/notfound/notfound.component';
 import { AboutUsComponent } from './components/shared/about-us/about-us.component';
-import { SigninComponent } from './signin/signin.component';
+import { SigninComponent } from './components/shared/signin/signin.component';
 
 const routes: Routes = [
   //redirection 
