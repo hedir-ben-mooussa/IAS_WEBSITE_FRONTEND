@@ -10,6 +10,7 @@ import { NotfoundComponent } from './components/shared/notfound/notfound.compone
 import { AboutUsComponent } from './components/shared/about-us/about-us.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { JoinusComponent } from './components/joinus/joinus.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { JoinusComponent } from './components/joinus/joinus.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

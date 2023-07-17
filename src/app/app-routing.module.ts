@@ -6,6 +6,7 @@ import { AboutUsComponent } from './components/shared/about-us/about-us.componen
 import { SigninComponent } from './components/signin/signin.component';
 import { JoinusComponent } from './components/joinus/joinus.component';
 
+
 const routes: Routes = [
   //redirection 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

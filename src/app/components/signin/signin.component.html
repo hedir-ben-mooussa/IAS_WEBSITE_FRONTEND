@@ -2,10 +2,10 @@
 <div class="main">  	
     <input type="checkbox" id="chk" aria-hidden="true">
     <div class="login" >
-        <form >
+        <form [formGroup]="formlogin">
             <label for="chk" aria-hidden="true">Login</label>
-            <input type="email" name="email" placeholder="Email" required="" formControlName="email">
-            <input type="password" name="pswd" placeholder="Password" required="" formControlName="pswd">
+            <input type="email" name="email" placeholder="Email" required="" formControlName="email" formControlName="email">
+            <input type="password" name="pswd" placeholder="Password" required="" formControlName="pswd" formControlName="password">
             <button>Login</button>
         </form>
     </div>
