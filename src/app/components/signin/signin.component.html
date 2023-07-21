@@ -2,23 +2,35 @@
 <div class="main">  	
     <input type="checkbox" id="chk" aria-hidden="true">
     <div class="login" >
-        <form [formGroup]="formlogin">
+        <form >
             <label for="chk" aria-hidden="true">Login</label>
-            <input type="email" name="email" placeholder="Email" required="" formControlName="email" formControlName="email">
-            <input type="password" name="pswd" placeholder="Password" required="" formControlName="pswd" formControlName="password">
-            <button>Login</button>
+                      <input type="email" name="email" placeholder="Email"  formControlName="email" >
+     <!--Alerte-->
+     <div class="error-message" *ngIf="formlogin.errors?.['email'] && (email?.dirty || email?.touched)">
+        Please enter a valid email address.
+      </div>
+    <!--FinAlerte-->
+                     <input type="password" name="pswd" placeholder="Password"  formControlName="pswd" >
+                     
+    <!--Alerte-->
+   <!-- <div class="alert alert-danger" role="alert"  *ngIf="formlogin.get('password')?.invalid && (formlogin.get('password')?.pristine || formlogin.get('password')?.touched)">>
+        Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character.
+    </div>-->
+    <!--FinAlerte-->
+
         </form>
     </div>
     
         <div class="signup">
-            <form>
+            <form [formGroup]="formlogin">
                 <label for="chk" aria-hidden="true">Sign up</label>
-                <input type="text" name="txt" placeholder="User name" required="">
-                <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pswd" placeholder="Password" required="">
+                <input type="text" name="txt" placeholder="User name" >
+                <input type="email" name="email" placeholder="Email" formControlName="email">
+                <input type="password" name="pswd" placeholder="Password"  formControlName="password">
                 <input type="text" name="id"  placeholder="Your IEEE ID">
 
-                <button>Sign up</button>
+            <button type="submit" (click)="onsubmit()">Login</button>
+            <button type="submit" >Sign up</button>
             </form>
         </div>
     
