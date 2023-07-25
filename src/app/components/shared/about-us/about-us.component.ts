@@ -24,7 +24,7 @@ export class AboutUsComponent  {
       clearInterval(this.yearcountstop);
     }
 
-  },100) //10 is milisecond you can control it
+  },500) //10 is milisecond you can control it
 
 
   accuratecountstop:any = setInterval(()=>{
@@ -34,7 +34,7 @@ export class AboutUsComponent  {
 
       clearInterval(this.accuratecountstop);
     }
-  },30) 
+  },100) 
 
 
   TAMcountstop:any = setInterval(()=>{
@@ -44,7 +44,7 @@ export class AboutUsComponent  {
 
       clearInterval(this.TAMcountstop);
     }
-  },100)
+  },500)
 
   //customerfeedbackstop:any = setInterval(()=>{
     //this.customerfeedback++;
