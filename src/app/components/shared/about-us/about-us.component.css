@@ -3,6 +3,7 @@
 .fimg{
     margin-top: -40px;
     width: 450px;
+    
 }
 /*.firstitle{
     margin-top: 70px;
@@ -83,12 +84,12 @@
     padding: 0;
     margin: 0;
     font-family: 'IBM Plex Serif',Serif;
-    background: #f3f3f3;
+   
   }
-  h1,h2,h3 {
-      margin: 0;
-      font-family: 'IBM Plex Sans',Serif;
-  }
+  /*h1,h2,h3 {
+    margin: 0;
+    font-family: 'IBM Plex Sans',Serif;
+}*/
   p {
       margin: 0;
       font-size: 18px;
@@ -128,8 +129,8 @@
       width: 150px;
       margin: auto;
       border-radius: 50%;
-      border: 1px solid rgb(170 170 173/ 1);
-      box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+      border: 1px solid rgb(170, 173, 170);
+      box-shadow: 0px 3px 10px 3px rgba(80, 218, 119, 0.5);
   }
   .teamcolinner {
       position: relative;
@@ -147,7 +148,7 @@
   }
   .teamcol:hover {
       transform: translateY(-30px);
-      box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+      box-shadow: 0px 3px 10px 3px rgba(27, 113, 61, 0.5);
       transition: transform 1s ease-in-out;
   }
   .teamcol:before {
@@ -199,6 +200,7 @@
       border-radius: 50%;
       margin: 5px;
   }
+
   /*what is ias*/
   .wrapper {
 	width: 90%;
@@ -212,4 +214,93 @@
 p {
 	line-height: 1.7;
 	font-size: calc(.875rem + .25vw);
+}
+/*IAS IN NUMBER*/
+.client-count-wrp {
+    
+    padding: 100px 0;
+}
+
+.heading  {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.client-count-wrp-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards {
+    color: #fff;
+    font-size: 70px;
+    line-height: 65px;
+}
+.numtitle{
+    color: #2B6326;
+}
+
+.cards:first-child h4 {
+    color: rgba(43, 99, 38, 1);
+}
+
+.cards:last-child h4 {
+    color:rgba(43, 99, 38, 1);
+}
+
+.cards:nth-child(2) h4 {
+    color: rgba(43, 99, 38, 1);
+}
+
+.cards:nth-child(3) h4 {
+    color: rgba(43, 99, 38, 1);
+}
+
+.cards p {
+    color: rgba(43, 99, 38, 1);
+    font-size: 20px;
+}
+.yearimg{
+    width: 60px;
+    height: 60px;
+}
+.memberimg{
+    width: 60px;
+    height: 60px;
+}
+.Tamimg{
+    width: 60px;
+    height: 60px;
+}
+.counterheading{
+    font-size: 50px;
+    text-align: center;
+    margin: 4%;
+    font-weight: lighter;
+    color: rgba(14, 96, 7, 1);
+}
+
+@media (max-width:991px) {
+    .mt-100 {
+        margin-top: 30px !important;
+    }
+    .client-count-wrp {
+        padding: 40px 0;
+    }
+    .client-count-wrp-inner {
+        flex-direction: column;
+    }
+    .cards h4 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .cards {
+        margin: 20px 0;
+    }
+    .client-count-wrp {
+        padding: 25px 0;
+        margin: 0 25px;
+    }
+    /****/
 }
