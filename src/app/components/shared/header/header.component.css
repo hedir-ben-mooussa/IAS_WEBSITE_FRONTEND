@@ -3,17 +3,20 @@
     height: 50px;
     
 }
-/* .slogan{
+.slogan{
     color: (11, 61, 3, 1);
-    text-align:initial;
-    
-} */
- /*
+padding-left: 155px;
+} 
+ 
 .logo{
-   width: 100px;
-   height: 100px;
+   width: 160px;
+   height: 150px;
+   margin-top: -28px;
    padding-top: -40px;
-}*/
+   position : absolute;
+   z-index: 2;
+   
+}
 .btn{
     background-color: rgba(105, 178, 99, 1);
 }
