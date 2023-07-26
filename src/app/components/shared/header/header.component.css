@@ -6,6 +6,7 @@
 .slogan{
     color: (11, 61, 3, 1);
 padding-left: 155px;
+font-family: 'Satisfy';
 } 
  
 .logo{
@@ -22,6 +23,7 @@ padding-left: 155px;
 }
 .nav-link {
     color: rgba(11, 61, 3, 1);
+    margin-top: 5px;
 }
 
 .btn{
@@ -29,4 +31,7 @@ padding-left: 155px;
      height: 100%;
       background: #69B263;
        border-radius: 70px;
+       margin-top:5px;
+       color: white;
+       text-align: center;
 }
