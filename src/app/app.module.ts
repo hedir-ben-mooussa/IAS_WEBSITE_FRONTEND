@@ -11,7 +11,7 @@ import { AboutUsComponent } from './components/shared/about-us/about-us.componen
 import { SigninComponent } from './components/signin/signin.component';
 import { JoinusComponent } from './components/joinus/joinus.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ActivitiesComponent } from './activities/activities.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
 
 @NgModule({
   declarations: [

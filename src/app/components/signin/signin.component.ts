@@ -11,28 +11,23 @@ import { FormGroup,FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit{
-  formlogin!:FormGroup
+  login!:FormGroup
   constructor(private fb:FormBuilder) {
    
     
    }
 
   ngOnInit(): void {
-    this.formlogin=this.fb.group(
+    this.login=this.fb.group(
       {"email":["",Validators.required,Validators.email],
-      "password":["",Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})')]
-      }
-     
+    "pswd":["",Validators.required ]}
     )
-    
-  
-  }
+
+  } 
+
   onsubmit(){
-    console.log(this.formlogin)
-    console.log(this.formlogin.value);
+   // console.log("hello")
+   console.log(this.login)
 
   }
-  get email() {
-    return this.formlogin.get('email');
-  } 
 }
