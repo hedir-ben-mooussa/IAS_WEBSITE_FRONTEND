@@ -1,0 +1,137 @@
+<div class="body">
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true" />
+    <!-- login form -->
+    <div class="login">
+      <form [formGroup]="signinForm">
+        <label for="chk" aria-hidden="true">Login</label>
+        <div
+          class="d-flex flex-column justify-content-start align-items-center"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            formControlName="email"
+          />
+          <!-- error messages -->
+          <div
+            *ngIf="
+              signinForm.controls['email'].invalid &&
+              (signinForm.controls['email'].dirty ||
+                signinForm.controls['email'].touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="signinForm.controls['email'].hasError('email')">
+              you must insert an email
+            </div>
+            <div *ngIf="signinForm.controls['email'].hasError('required')">
+              email is required
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column justify-content-start align-items-center"
+        >
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <!-- error messages -->
+          <div
+            *ngIf="
+              signinForm.controls['password'].invalid &&
+              (signinForm.controls['password'].dirty ||
+                signinForm.controls['password'].touched)
+            "
+            class="text-danger"
+          >
+            <div>
+              <div *ngIf="signinForm.controls['password'].hasError('required')">
+                password is required
+              </div>
+            </div>
+          </div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- signup form -->
+    <div class="signup">
+      <form [formGroup]="signupForm">
+        <label for="chk" aria-hidden="true">Sign up</label>
+        <input
+          type="text"
+          name="txt"
+          placeholder="User name"
+          formControlName="name"
+        />
+        <div
+          class="d-flex flex-column justify-content-start align-items-center"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            formControlName="email2"
+          />
+          <!-- error messages -->
+          <div
+          *ngIf="
+          signupForm.controls['email2'].invalid &&
+            (signupForm.controls['email2'].dirty ||
+            signupForm.controls['email2'].touched)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="signupForm.controls['email2'].hasError('email')">
+            you must insert an email
+          </div>
+          <div *ngIf="signupForm.controls['email2'].hasError('required')">
+            email is required
+          </div>
+        </div>
+      </div>
+       
+      <div
+      class="d-flex flex-column justify-content-start align-items-center"
+    >
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          formControlName="password2"
+        />
+        <!-- error messages -->
+        <div
+        *ngIf="
+        signupForm.controls['password2'].invalid &&
+          (signupForm.controls['password2'].dirty ||
+          signupForm.controls['password2'].touched)
+        "
+        class="text-danger"
+      >
+        
+        <div *ngIf="signupForm.controls['password2'].hasError('required')">
+          password is required
+        </div>
+      </div>
+    </div>
+        <input
+          type="text"
+          name="id"
+          placeholder="Your IEEE ID"
+          formControlName="ID"
+         
+    
+        />
+        
+        <button type="submit">Sign up</button>
+      </form>
+    </div>
+  </div>
+</div>
