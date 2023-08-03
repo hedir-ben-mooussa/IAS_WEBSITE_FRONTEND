@@ -50,11 +50,12 @@ input{
 	background: #e0dede;
 	justify-content: center;
 	display: flex;
-	margin: 20px auto;
+	margin: 8px auto;
 	padding: 10px;
 	border: none;
 	outline: none;
 	border-radius: 5px;
+
 }
 button{
 	width: 60%;
@@ -74,7 +75,7 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #6d44b8;
+	background: #077201;
 }
 .signup{
 	height: 460px;
@@ -82,6 +83,7 @@ button:hover{
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
+	
 	
 }
 .signup label{
