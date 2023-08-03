@@ -14,7 +14,10 @@ joinusform:FormGroup
     this.joinusform = this.formbuilder.group({
       fullname:['',Validators.required],
       email:['',Validators.required,Validators.email],
-      phonenumber:['',Validators.required],
+      phonenumber:['',Validators.compose([Validators.required,
+        Validators.maxLength(8),
+        Validators.minLength(8)
+        ])],
       dateofbirth:['',Validators.required],
 
       

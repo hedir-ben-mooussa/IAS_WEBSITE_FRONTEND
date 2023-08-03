@@ -64,18 +64,24 @@
     <div class="signup">
       <form [formGroup]="signupForm">
         <label for="chk" aria-hidden="true">Sign up</label>
-        <input
-          type="text"
-          name="txt"
-          placeholder="User name"
-          formControlName="name"
-        />
+        <div
+          class="d-flex flex-column justify-content-start align-items-center"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="User name"
+            formControlName="name"
+          />
+        </div>
+        <!-- error messages -->
+
         <div
           class="d-flex flex-column justify-content-start align-items-center"
         >
           <input
             type="email"
-            name="email"
+            name="email2"
             placeholder="Email"
             formControlName="email2"
           />
@@ -120,12 +126,15 @@
             </div>
           </div>
         </div>
-        <input
-          type="text"
-          name="id"
-          placeholder="Your IEEE ID"
-          formControlName="ID"
-        />
+        <div
+          class="d-flex flex-column justify-content-start align-items-center"
+        >
+          <input
+            type="number"
+            name="ID"
+            placeholder="Your IEEE ID"
+            formControlName="ID"
+          />
           <!-- error messages -->
           <div
             *ngIf="
@@ -136,11 +145,20 @@
             class="text-danger"
           >
             <div *ngIf="signupForm.controls['ID'].hasError('required')">
-             Id is required
+              Id is required
             </div>
-            
+            <div
+              *ngIf="
+                signupForm.controls['ID'].hasError('maxlength') ||
+                signupForm.controls['ID'].hasError('minlength')
+              "
+            >
+              ID must be 8 characters long
+            </div>
+            <!-- haka khyr erreur enty thebo 8 character max o min yaany 8 exact tgolo if min or max fyh erreyr wahed mnhom khrj msg -->
           </div>
-       
+        </div>
+
         <button type="submit">Sign up</button>
       </form>
     </div>

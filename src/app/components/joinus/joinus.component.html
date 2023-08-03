@@ -81,6 +81,14 @@
               >
                 Please enter your phone number
               </div>
+              <div
+              *ngIf="
+              joinusform.controls['phonenumber'].hasError('maxlength') ||
+              joinusform.controls['phonenumber'].hasError('minlength')
+              "
+            >
+              ID must be 8 characters long
+            </div>
             </div>
           </div>
         
