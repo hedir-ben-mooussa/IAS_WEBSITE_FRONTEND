@@ -1,50 +1,127 @@
-
 <div class="body">
-   
-
-    <div class="modernForm">
-      <div class="imageSection">
-        <div class="image">
-         
-          <img src="..\assets\joinus\ieee.jpg" alt="pexels-yuri-manei-2272854">
-        </div>
-        
-       
-      </div>
-      <div class="contactForm">
-        <h1>Registaration Form</h1>
-        <form>
-          <div class="name">
-            <label for="fullName">Full Name:</label>
-            <input type="text" name="fullName" id="fullName" placeholder="ex: Lindsey Wilson" required/>
-            <div class="iconName"><i class="fa-solid fa-user"></i></div>
-          </div>
-          <div class="name">
-            <label for="email">Your Email:</label>
-            <input type="email" name="email" id="email" required />
-            <div class="iconName"><i class="fa-solid fa-envelope"></i></div>
-          </div>
-          <div class="name">
-            <label for="Password">Your number:</label>
-            <input type="text" name="password" id="password" required />
-            <div class="iconName"><i class="fa-solid fa-lock"></i></div>
-          </div>
-          <div class="name">
-            <label for="Password">Date of birth:</label>
-            <input type="date"  id="dob" required />
-            <div class="iconName"><i class="fa-solid fa-lock"></i></div>
-          </div>
-          <div class="checkbox">
-            <p>Are you IEEE member?</p>
-            <input type="radio" id="checkbox" name="checkbox" required>
-            <label for="checkbox">YES
-              
-              <input type="radio" id="checkbox" name="checkbox" required>
-            <label for="checkbox">NO
-        </label>
-          </label>
-          </div>
-          <input type="submit" value="Register">
-        </form>
+  <div class="modernForm">
+    <div class="imageSection">
+      <div class="image">
+        <img src="..\assets\joinus\ieee.jpg" alt="pexels-yuri-manei-2272854" />
       </div>
     </div>
+    <div class="contactForm">
+      <h1>Registaration Form</h1>
+      <form [formGroup]="joinusform">
+        <!--fullname-->
+
+        <div class="name">
+          <label for="fullName">Full Name:</label>
+         
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              placeholder="ex: Lindsey Wilson"
+              formControlName="fullname"
+            />
+            <!-- error messages -->
+            <div
+              *ngIf="
+                joinusform.controls['fullname'].invalid &&
+                (joinusform.controls['fullname'].dirty ||
+                  joinusform.controls['fullname'].touched)
+              "
+              class="text-danger"
+            >
+              <div *ngIf="joinusform.controls['fullname'].hasError('required')">
+                Please enter your Full Name
+              </div>
+            </div>
+          </div>
+        
+        <!--email-->
+        <div class="name">
+          <label >Your Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              formControlName="email"
+            />
+            <!-- error messages -->
+          </div>
+          <div
+            *ngIf="
+              joinusform.controls['email'].invalid &&
+              (joinusform.controls['email'].dirty ||
+                joinusform.controls['email'].touched)
+            "
+            class="text-danger"
+          >
+          <div *ngIf="joinusform.controls['email'].hasError('email')">
+            you must insert an email
+          </div>
+            <div *ngIf="joinusform.controls['email'].hasError('required')">
+              Please enter your Email
+            </div>
+          </div>
+        
+        <!--phoneNumber-->
+
+        <div class="name">
+          <label>Your phone number:</label>
+         
+          <input type="text" name="password" id="password" formControlName="phonenumber" />
+          <div
+              *ngIf="
+                joinusform.controls['phonenumber'].invalid &&
+                (joinusform.controls['phonenumber'].dirty ||
+                  joinusform.controls['phonenumber'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="joinusform.controls['phonenumber'].hasError('required')"
+              >
+                Please enter your phone number
+              </div>
+            </div>
+          </div>
+        
+        <!--date of birth-->
+
+        <div class="name">
+          <label for="Password">Date of birth:</label>
+          
+            <input type="date" id="dob" formControlName="dateofbirth" />
+            <!-- error messages -->
+
+            <div
+              *ngIf="
+                joinusform.controls['dateofbirth'].invalid &&
+                (joinusform.controls['dateofbirth'].dirty ||
+                  joinusform.controls['dateofbirth'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="joinusform.controls['dateofbirth'].hasError('required')"
+              >
+                Please enter your phone date of birth
+              </div>
+            </div>
+          </div>
+       
+        <!--IEEEE member-->
+
+        <div class="checkbox">
+          <p>Are you IEEE member?</p>
+          <input type="radio" id="checkbox" name="checkbox" required />
+          <label for="checkbox"
+            >YES
+
+            <input type="radio" id="checkbox" name="checkbox" required />
+            <label for="checkbox">NO </label>
+          </label>
+        </div>
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+  </div>
+</div>

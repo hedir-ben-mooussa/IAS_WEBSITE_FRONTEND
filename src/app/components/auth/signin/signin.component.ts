@@ -29,7 +29,7 @@ constructor(private formbuilder:FormBuilder){
       name:['',Validators.required],
       email2:['',Validators.required,Validators.email],
       password2:['',Validators.required],
-      ID:['',Validators.required,Validators.maxLength(8),Validators.minLength(8)],
+      ID:['',Validators.required,Validators.compose([ Validators.maxLength(8),Validators.minLength(8)])],
 
 
 
