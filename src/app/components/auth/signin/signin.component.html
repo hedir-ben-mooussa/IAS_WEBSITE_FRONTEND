@@ -1,3 +1,10 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 <div class="body">
   <div class="main">
     <input type="checkbox" id="chk" aria-hidden="true" />
@@ -24,9 +31,13 @@
             class="text-danger"
           >
             <div *ngIf="signinForm.controls['email'].hasError('email')">
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
               you must insert an email
             </div>
             <div *ngIf="signinForm.controls['email'].hasError('required')">
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
               email is required
             </div>
           </div>
@@ -51,6 +62,8 @@
           >
             <div>
               <div *ngIf="signinForm.controls['password'].hasError('required')">
+                <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
                 password is required
               </div>
             </div>
@@ -67,14 +80,36 @@
         <div
           class="d-flex flex-column justify-content-start align-items-center"
         >
-          <input
-            type="text"
-            name="name"
-            placeholder="User name"
-            formControlName="name"
-          />
+          <div
+            class="d-flex flex-column justify-content-start align-items-center"
+          >
+            <input
+              type="text"
+              name=" username"
+              placeholder="User name"
+              formControlName="name"
+              formControlName="username"
+            />
+          </div>
+          <!-- error messages -->
+
+          <div
+            *ngIf="
+              signupForm.controls['username'].invalid &&
+              (signupForm.controls['username'].dirty ||
+                signupForm.controls['username'].touched)
+            "
+            class="text-danger"
+          >
+            <div>
+              <div *ngIf="signupForm.controls['username'].hasError('required')">
+                <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+                User name is required
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- error messages -->
 
         <div
           class="d-flex flex-column justify-content-start align-items-center"
@@ -95,9 +130,12 @@
             class="text-danger"
           >
             <div *ngIf="signupForm.controls['email2'].hasError('email')">
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
               you must insert an email
             </div>
+
             <div *ngIf="signupForm.controls['email2'].hasError('required')">
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
               email is required
             </div>
           </div>
@@ -129,12 +167,7 @@
         <div
           class="d-flex flex-column justify-content-start align-items-center"
         >
-          <input
-            type="number"
-            name="ID"
-            placeholder="Your IEEE ID"
-            formControlName="ID"
-          />
+          <input name="ID" placeholder="Your IEEE ID" formControlName="ID" />
           <!-- error messages -->
           <div
             *ngIf="
@@ -145,6 +178,7 @@
             class="text-danger"
           >
             <div *ngIf="signupForm.controls['ID'].hasError('required')">
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
               Id is required
             </div>
             <div
@@ -153,9 +187,9 @@
                 signupForm.controls['ID'].hasError('minlength')
               "
             >
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
               ID must be 8 characters long
             </div>
-            <!-- haka khyr erreur enty thebo 8 character max o min yaany 8 exact tgolo if min or max fyh erreyr wahed mnhom khrj msg -->
           </div>
         </div>
 

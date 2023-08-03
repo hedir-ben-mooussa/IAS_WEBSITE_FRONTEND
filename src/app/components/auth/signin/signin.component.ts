@@ -33,7 +33,7 @@ export class SigninComponent implements OnInit {
       Validators.minLength(8)
       ])
       ],
- 
+ username:['',Validators.required]
     })
   }
 
