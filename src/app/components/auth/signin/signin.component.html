@@ -75,70 +75,69 @@
 
     <!-- signup form -->
     <div class="signup">
-      <form [formGroup]="signupForm">
+      <form [formGroup]="signupForm" (ngSubmit)="submit()">
         <label for="chk" aria-hidden="true">Sign up</label>
-        
+        <!-- username -->
         <div
-        class="d-flex flex-column justify-content-start align-items-center"
-      >
-            <input
-              type="text"
-              name=" username"
-              placeholder="User name"
-              formControlName="name"
-              formControlName="username"
-            />
-          
+          class="d-flex flex-column justify-content-start align-items-center"
+        >
+          <input
+            type="text"
+            name=" name"
+            placeholder="User name"
+            formControlName="name"
+          />
+
           <!-- error messages -->
 
           <div
             *ngIf="
-              signupForm.controls['username'].invalid &&
-              (signupForm.controls['username'].dirty ||
-                signupForm.controls['username'].touched)
+              signupForm.controls['name'].invalid &&
+              (signupForm.controls['name'].dirty ||
+                signupForm.controls['name'].touched)
             "
             class="text-danger"
           >
             <div>
-              <div *ngIf="signupForm.controls['username'].hasError('required')">
+              <div *ngIf="signupForm.controls['name'].hasError('required')">
                 <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
 
                 User name is required
               </div>
             </div>
           </div>
-      
-</div>
+        </div>
+        <!-- email -->
         <div
           class="d-flex flex-column justify-content-start align-items-center"
         >
           <input
             type="email"
-            name="email2"
+            name="email"
             placeholder="Email"
-            formControlName="email2"
+            formControlName="email"
           />
           <!-- error messages -->
           <div
             *ngIf="
-              signupForm.controls['email2'].invalid &&
-              (signupForm.controls['email2'].dirty ||
-                signupForm.controls['email2'].touched)
+              signupForm.controls['email'].invalid &&
+              (signupForm.controls['email'].dirty ||
+                signupForm.controls['email'].touched)
             "
             class="text-danger"
           >
-            <div *ngIf="signupForm.controls['email2'].hasError('email')">
+            <div *ngIf="signupForm.controls['email'].hasError('email')">
               <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
               you must insert an email
             </div>
 
-            <div *ngIf="signupForm.controls['email2'].hasError('required')">
+            <div *ngIf="signupForm.controls['email'].hasError('required')">
               <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
               email is required
             </div>
           </div>
         </div>
-
+        <!-- password -->
         <div
           class="d-flex flex-column justify-content-start align-items-center"
         >
@@ -146,43 +145,49 @@
             type="password"
             name="password"
             placeholder="Password"
-            formControlName="password2"
+            formControlName="password"
           />
           <!-- error messages -->
           <div
             *ngIf="
-              signupForm.controls['password2'].invalid &&
-              (signupForm.controls['password2'].dirty ||
-                signupForm.controls['password2'].touched)
+              signupForm.controls['password'].invalid &&
+              (signupForm.controls['password'].dirty ||
+                signupForm.controls['password'].touched)
             "
             class="text-danger"
           >
-            <div *ngIf="signupForm.controls['password2'].hasError('required')">
+            <div *ngIf="signupForm.controls['password'].hasError('required')">
               password is required
             </div>
           </div>
         </div>
+        <!-- id user -->
         <div
           class="d-flex flex-column justify-content-start align-items-center"
         >
-          <input name="ID" placeholder="Your IEEE ID" formControlName="ID" />
+          <input
+            type="text"
+            name="iduser"
+            placeholder="Your IEEE ID"
+            formControlName="iduser"
+          />
           <!-- error messages -->
           <div
             *ngIf="
-              signupForm.controls['ID'].invalid &&
-              (signupForm.controls['ID'].dirty ||
-                signupForm.controls['ID'].touched)
+              signupForm.controls['iduser'].invalid &&
+              (signupForm.controls['iduser'].dirty ||
+                signupForm.controls['iduser'].touched)
             "
             class="text-danger"
           >
-            <div *ngIf="signupForm.controls['ID'].hasError('required')">
+            <div *ngIf="signupForm.controls['iduser'].hasError('required')">
               <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
               Id is required
             </div>
             <div
               *ngIf="
-                signupForm.controls['ID'].hasError('maxlength') ||
-                signupForm.controls['ID'].hasError('minlength')
+                signupForm.controls['iduser'].hasError('maxlength') ||
+                signupForm.controls['iduser'].hasError('minlength')
               "
             >
               <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
@@ -191,7 +196,7 @@
           </div>
         </div>
 
-        <button type="submit">Sign up</button>
+        <button type="submit" >Sign up</button>
       </form>
     </div>
   </div>

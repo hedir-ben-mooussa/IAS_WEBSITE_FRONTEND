@@ -12,6 +12,7 @@ import { SigninComponent } from './components/auth/signin/signin.component';
 import { JoinusComponent } from './components/joinus/joinus.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActivitiesComponent } from './components/activities/activities.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ActivitiesComponent } from './components/activities/activities.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

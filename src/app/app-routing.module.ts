@@ -15,10 +15,6 @@ const routes: Routes = [
   {path:'signin', component:SigninComponent},
   {path:'joinus', component:JoinusComponent},
 
-
-
-
-
   {path:'**', component:NotfoundComponent},
 
 
