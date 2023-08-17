@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { JoinusServiceService } from 'src/app/core/services/joinus-service';
 
 @Component({
   selector: 'app-joinus',
@@ -8,7 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class JoinusComponent implements OnInit {
 joinusform:FormGroup
-  constructor(private formbuilder:FormBuilder) { }
+  constructor(private formbuilder:FormBuilder,
+    private JoinusServiceService:JoinusServiceService) { }
 
   ngOnInit(): void {
     this.joinusform = this.formbuilder.group({
@@ -25,6 +27,19 @@ joinusform:FormGroup
     }
 
     )
+  }
+  submit(){
+   console.log("form",this.joinusform.value)
+   this.JoinusServiceService.create(this.joinusform.value).subscribe(
+    {
+      complete: () => { console.log("done !") },
+      error: (err) => { console.log("erreur", err) }
+
+    }
+   )
+    
+   
+
   }
 
 }

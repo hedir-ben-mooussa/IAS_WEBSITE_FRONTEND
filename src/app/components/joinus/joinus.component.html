@@ -14,7 +14,7 @@
     </div>
     <div class="contactForm">
       <h1>Registaration Form</h1>
-      <form [formGroup]="joinusform">
+      <form [formGroup]="joinusform" (ngSubmit)="submit()">
         <!--fullname-->
 
         <div class="name">
