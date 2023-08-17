@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -12,7 +12,8 @@ import { SigninComponent } from './components/auth/signin/signin.component';
 import { JoinusComponent } from './components/joinus/joinus.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActivitiesComponent } from './components/activities/activities.component';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,16 @@ import {  HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(
+      {
+        timeOut: 4000,
+        positionClass: 'toast-bottom-right',
+        preventDuplicates: true,
+      }
+    ), // ToastrModule added
+
 
   ],
   providers: [],
