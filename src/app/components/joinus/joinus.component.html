@@ -58,11 +58,11 @@
           "
           class="text-danger"
         >
-          <div *ngIf="joinusform.controls['email'].hasError('email')">
+          <!--<div *ngIf="joinusform.controls['email'].hasError('email')">
             <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
 
             you must insert an email
-          </div>
+          </div>-->
           <div *ngIf="joinusform.controls['email'].hasError('required')">
             <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
 
@@ -139,14 +139,14 @@
 
         <div class="checkbox">
           <p>Are you IEEE member?</p>
-          <input type="radio" id="checkbox" name="checkbox" required />
-          <label for="checkbox"
-            >YES
-
-            <input type="radio" id="checkbox" name="checkbox" required />
-            <label for="checkbox">NO </label>
-          </label>
+          <!-- rado button for anwser: yes -->
+          <input type="radio" id="checkbox" name="checkbox" value="YES" formControlName="ieee_member"  />
+          <label for="checkbox">YES </label>
+          <!-- rado button for anwser :no -->
+          <input type="radio" id="checkbox" name="checkbox" value="NO" formControlName="ieee_member"  />
+          <label for="checkbox">NO </label>
         </div>
+
         <input type="submit" value="Register" />
       </form>
     </div>
