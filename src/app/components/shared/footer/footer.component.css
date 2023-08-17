@@ -21,7 +21,7 @@
   
   
   .footer {
-      background: linear-gradient(#383838 , #017e22 );
+      background-color:  #003300 ;
       color: #fff;
   }
   .footer-wave-svg {
@@ -98,7 +98,7 @@
       margin-right: 0;
   }
   .footer-call-to-action-button {
-      background-color: #027b9a;
+      background-color: #69b263;
       border-radius: 21px;
       color: #fffff2;
       display: inline-block;
@@ -160,7 +160,7 @@
   }
   
   .footer-social-amoeba-path {
-   fill:  #0e5922 ;
+   fill:  #005700 ;
   }
   
   .footer-social-link.linkedin {
@@ -221,7 +221,7 @@
   }
   .footer-copyright {
   
-  background-color: #0e5922;
+  background-color: #005700;
       color: #fff;
       padding: 15px 30px;
     text-align: center;

@@ -1,5 +1,5 @@
 .maindiv{
-    background-color: rgba(225, 253, 212, 1);
+    background-color: #e1fdd4;
     height: 50px;
     
 }
@@ -19,10 +19,10 @@ font-family: 'Satisfy';
    
 }
 .btn{
-    background-color: rgba(105, 178, 99, 1);
+    background-color: #69b263;
 }
 .nav-link {
-    color: rgba(11, 61, 3, 1);
+    color: #0b3d03;
     margin-top: 5px;
    
 }
