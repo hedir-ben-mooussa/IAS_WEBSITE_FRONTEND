@@ -5,6 +5,7 @@ import { NotfoundComponent } from './components/shared/notfound/notfound.compone
 import { AboutUsComponent } from './components/shared/about-us/about-us.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { JoinusComponent } from './components/joinus/joinus.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'aboutus', component:AboutUsComponent},
   {path:'signin', component:SigninComponent},
   {path:'joinus', component:JoinusComponent},
+  {path:'activities',component:ActivitiesComponent},
 
   {path:'**', component:NotfoundComponent},
 
