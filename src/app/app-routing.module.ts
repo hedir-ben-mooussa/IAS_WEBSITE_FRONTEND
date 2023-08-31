@@ -6,6 +6,8 @@ import { AboutUsComponent } from './components/shared/about-us/about-us.componen
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { JoinusComponent } from './components/joinus/joinus.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { EventListComponent } from './components/event-list/event-list.component';
 
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path:'signin', component:SigninComponent},
   {path:'joinus', component:JoinusComponent},
   {path:'activities',component:ActivitiesComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'events',component:EventListComponent},
 
   {path:'**', component:NotfoundComponent},
 

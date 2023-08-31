@@ -14,6 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { ContactComponent } from './components/contact/contact.component';
+import { EventListComponent } from './components/event-list/event-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ToastrModule } from 'ngx-toastr';
     SigninComponent,
     JoinusComponent,
     ActivitiesComponent,
+    ContactComponent,
+    EventListComponent,
   ],
   imports: [
     BrowserModule,
