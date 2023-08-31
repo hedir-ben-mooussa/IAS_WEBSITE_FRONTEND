@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { ContactComponent } from './components/contact/contact.component';
 import { EventListComponent } from './components/event-list/event-list.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { EventListComponent } from './components/event-list/event-list.component
     ActivitiesComponent,
     ContactComponent,
     EventListComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { JoinusComponent } from './components/joinus/joinus.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EventListComponent } from './components/event-list/event-list.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'activities',component:ActivitiesComponent},
   {path:'contact',component:ContactComponent},
   {path:'events',component:EventListComponent},
+  {path:'user',component:UserListComponent},
 
   {path:'**', component:NotfoundComponent},
 
