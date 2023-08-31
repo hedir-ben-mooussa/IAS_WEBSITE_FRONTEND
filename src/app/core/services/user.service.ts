@@ -16,4 +16,10 @@ export class UserService {
     //backtick ``
     return this.http.post(`${this.url}/user/adduser`, user);
   }
+  getallUsers(){
+    return this.http.get(`${this.url}/user/getAll`);
+  }
+  deleteUsers(iduser:any){
+    return this.http.delete(`${this.url}/user/delete/${iduser}`);
+  }
 }
