@@ -17,4 +17,10 @@ export class JoinusService {
    create(joinus:Joinus){
     return this.http.post(`${this.url}/Joinus/addstudent`,joinus);
    }
+   getallStudent(){
+    return this.http.get(`${this.url}/Joinus/getall`);
+   }
+   deleteStudent(id:any){
+    return this.http.delete(`${this.url}/Joinus/delete/${id}`);
+   }
 }
