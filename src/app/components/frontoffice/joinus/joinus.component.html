@@ -1,0 +1,154 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<div class="body">
+  <div class="modernForm">
+    <div class="imageSection">
+      <div class="image">
+        <img src="..\assets\joinus\ieee.jpg" alt="pexels-yuri-manei-2272854" />
+      </div>
+    </div>
+    <div class="contactForm">
+      <h1>Registaration Form</h1>
+      <form [formGroup]="joinusform" (ngSubmit)="submit()">
+        <!--fullname-->
+
+        <div class="name">
+          <label for="fullName">Full Name:</label>
+
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            placeholder="ex: Lindsey Wilson"
+            formControlName="fullname"
+          />
+          <!-- error messages -->
+          <div
+            *ngIf="
+              joinusform.controls['fullname'].invalid &&
+              (joinusform.controls['fullname'].dirty ||
+                joinusform.controls['fullname'].touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="joinusform.controls['fullname'].hasError('required')">
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+              Please enter your Full Name
+            </div>
+          </div>
+        </div>
+
+        <!--email-->
+        <div class="name">
+          <label>Your Email:</label>
+          <input type="email" name="email" id="email" formControlName="email" />
+          <!-- error messages -->
+        </div>
+        <div
+          *ngIf="
+            joinusform.controls['email'].invalid &&
+            (joinusform.controls['email'].dirty ||
+              joinusform.controls['email'].touched)
+          "
+          class="text-danger"
+        >
+          <!--<div *ngIf="joinusform.controls['email'].hasError('email')">
+            <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+            you must insert an email
+          </div>-->
+          <div *ngIf="joinusform.controls['email'].hasError('required')">
+            <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+            Please enter your Email
+          </div>
+        </div>
+
+        <!--phoneNumber-->
+
+        <div class="name">
+          <label>Your phone number:</label>
+
+          <input
+            type="text"
+            name="password"
+            id="password"
+            formControlName="phonenumber"
+          />
+          <div
+            *ngIf="
+              joinusform.controls['phonenumber'].invalid &&
+              (joinusform.controls['phonenumber'].dirty ||
+                joinusform.controls['phonenumber'].touched)
+            "
+            class="text-danger"
+          >
+            <div
+              *ngIf="joinusform.controls['phonenumber'].hasError('required')"
+            >
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+              Please enter your phone number
+            </div>
+            <div
+              *ngIf="
+                joinusform.controls['phonenumber'].hasError('maxlength') ||
+                joinusform.controls['phonenumber'].hasError('minlength')
+              "
+            >
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+              Number must be 8 characters long
+            </div>
+          </div>
+        </div>
+
+        <!--date of birth-->
+
+        <div class="name">
+          <label for="Password">Date of birth:</label>
+
+          <input type="date" id="dob" formControlName="dateofbirth" />
+          <!-- error messages -->
+
+          <div
+            *ngIf="
+              joinusform.controls['dateofbirth'].invalid &&
+              (joinusform.controls['dateofbirth'].dirty ||
+                joinusform.controls['dateofbirth'].touched)
+            "
+            class="text-danger"
+          >
+            <div
+              *ngIf="joinusform.controls['dateofbirth'].hasError('required')"
+            >
+              <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+              Please enter your phone date of birth
+            </div>
+          </div>
+        </div>
+
+        <!--IEEEE member-->
+
+        <div class="checkbox">
+          <p>Are you IEEE member?</p>
+          <!-- rado button for anwser: yes -->
+          <input type="radio" id="checkbox" name="checkbox" value="YES" formControlName="ieee_member"  />
+          <label for="checkbox">YES </label>
+          <!-- rado button for anwser :no -->
+          <input type="radio" id="checkbox" name="checkbox" value="NO" formControlName="ieee_member"  />
+          <label for="checkbox">NO </label>
+        </div>
+
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+  </div>
+</div>

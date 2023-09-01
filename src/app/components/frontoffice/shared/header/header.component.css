@@ -1,0 +1,118 @@
+.maindiv{
+    background-color: #e1fdd4;
+    height: 50px;
+    
+}
+.slogan{
+    color: (11, 61, 3, 1);
+padding-left: 155px;
+font-family: 'Satisfy';
+} 
+ 
+.logo{
+   width: 160px;
+   height: 150px;
+   margin-top: -28px;
+   padding-top: -40px;
+   position : absolute;
+   z-index: 2;
+   
+}
+.btn{
+    background-color: #69b263;
+}
+.nav-link {
+    color: #0b3d03;
+    margin-top: 5px;
+   
+}
+.nav-link:hover{
+
+}
+
+.btn{
+    width: 100%;
+     height: 100%;
+      background: #69B263;
+       border-radius: 70px;
+       margin-top:5px;
+       color: white;
+       text-align: center;
+}
+/*responsive design*/
+
+ label #btn,
+ label #cancel{
+font-size: 30px;
+line-height: 15px;
+margin-right: 20px;
+cursor: pointer;
+display: none;
+ }
+ #check{
+display: none;
+ }
+
+#click{
+    display: none;
+}
+
+
+/*
+@media all and (max-width:943px){
+    label #btn{
+        display: block;
+    }
+nav #ul{
+    position: fixed;
+    top: 80px;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: rgba(225, 253, 212, 1);
+
+}
+nav #ul #li{
+    margin: 20px 0;
+}
+nav #ul #li #a{
+    font-size: 20px;
+    display: block;
+    font-weight: 600;
+
+}
+#click:checked ~ #ul{
+    left: 0;
+}
+#click:checked ~ .nav{
+    left: 0%;
+}
+#click:checked ~ label #btn{
+    display: none;
+}
+#check:checked ~ label #cancel{
+    display: block;
+}
+    .head{
+        display: none;
+    }
+
+}*/
+/* .nav,.nav-item,.nav-link{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+
+    }
+    #check:checked ~ .nav{
+        left: 0%;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }*/
