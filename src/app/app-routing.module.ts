@@ -1,31 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/shared/home/home.component';
-import { NotfoundComponent } from './components/shared/notfound/notfound.component';
-import { AboutUsComponent } from './components/shared/about-us/about-us.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
-import { JoinusComponent } from './components/joinus/joinus.component';
-import { ActivitiesComponent } from './components/activities/activities.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { EventListComponent } from './components/event-list/event-list.component';
-import { UserListComponent } from './components/user-list/user-list.component';
+import { NotfoundComponent } from './components/frontoffice/shared/notfound/notfound.component';
 
 
 const routes: Routes = [
-  //redirection 
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {path:'home', component:HomeComponent},
-  {path:'aboutus', component:AboutUsComponent},
-  {path:'signin', component:SigninComponent},
-  {path:'joinus', component:JoinusComponent},
-  {path:'activities',component:ActivitiesComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'events',component:EventListComponent},
-  {path:'user',component:UserListComponent},
-
-  {path:'**', component:NotfoundComponent},
-
-
+  { path: '', loadChildren: () => import('./components/frontoffice/frontoffice.module').then(m => m.FrontofficeModule) },
+  { path: 'signin', component: SigninComponent },
+  { path: 'backoffice', loadChildren: () => import('./components/backoffice/backoffice.module').then(m => m.BackofficeModule) },
+  { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({
