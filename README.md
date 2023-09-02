@@ -1,27 +1,91 @@
-# FirstWebSite
+# IEEE IAS WEBSITE
+<div id="top" align="center">
+<br/>
+  <p align="center">
+  <img src="/src/assets/iaslogo.png" alt="logo" width="70%" height="300px" />
+    This is the official IEEE IAS app documentation <br/>
+  </p>
+ </div>
+ <!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#-about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#-built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#-getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#-prerequisites">Prerequisites</a></li>
+        <li><a href="#-installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#-contributing">Contributing</a></li>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
-## Development server
+  </ol>
+</details>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📃 About The Project
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 🚀 Built With
 
-## Running unit tests
+ You may find below the list of the frameworks/libraries that we used to build our project :
+<br/>
+  <div align="center">
+ <a href="https://angular.io/" title="Angular">
+   <img src="https://github.com/get-icon/geticon/raw/master/icons/angular-icon.svg" alt="Angular" width="150" height="150">
+  </a>
+   <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original.svg" alt="springboot" width="150" height="150">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-plain-wordmark.svg" alt="mysql" width="150" height="150">
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  </div>
+  
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<!-- GETTING STARTED -->
+## ✨ Getting Started
+To get a local copy up and running follow these simple example steps.
+
+### 🚧 Prerequisites
+
+You may find below the list of things you need to use this project :
+* Make sure nodejs is running on your system.
+* You will need to install the "yarn" or "npm" command line.
+
+### 🛠 Installation
+
+_In order to install the app you need to follow the instructions below :_
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/hedir-ben-mooussa/IAS_WEBSITE_FRONTEND
+   ```
+2. Install NPM packages dependencies <br/>
+
+   ```sh
+   $ cd IAS_WEBSITE_FRONTEND/
+   ```
+
+   ```sh
+   $ npm install 
+   ```
+   
+3. Run  server on <br/> 
+   
+   ```sh
+   ng serve --open
+   ```
+ 
+<p align="right">(<a href="#top">back to top</a>)</p>
