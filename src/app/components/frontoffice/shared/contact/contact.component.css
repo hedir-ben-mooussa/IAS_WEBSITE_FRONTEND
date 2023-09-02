@@ -1,99 +1,142 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans",sans-serif;
+body{margin-top:20px;}
+
+
+/*======= Contact ======*/
+
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 2px solid #cecece;
+  height: 38px;
 }
-.maindiv{
-    margin-top: 80px;
-}
-.title-heading{
-    font-size: 3em;
-    text-align: center;
-    margin: 4%;
-    font-weight: lighter;
-    color: #0e6007;
-}
-.map{
-    margin-left: 150px;
+.form-control:hover ,.form-control:focus{
+  border-color: #97a0af;
 }
 
-/* body{
-    height: 100vh;
-    background: url(bg.jpg) no-repeat center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-} */
 
-.contact-info{
+.error {
+  margin: 8px 0px;
+  display: none;
+  color: red;
+}
+#ajaxsuccess {
+  font-size: 16px;
+  width: 100%;
+  display: none;
+  clear: both;
+  margin: 8px 0px;
+}
+.con_sub_text {
+  margin: 20px 0px;
+  font-size: 15px;
+}
+
+.contact-detail-box {
+  margin-bottom: 50px;
+}
+
+.contact-detail-box address {
+  font-size: 14px;
+}
+.contact-map {
+  background-color: #ededed;
+}
+
+.title-box .border,.btn-primary,.back-to-top,
+.logo i,.question-q-box,.social-circle li a:hover {
+  background-color: rgba(43, 99, 38, 1) !important;
+}
+.title-box .title-alt,.text-colored,.footer a:hover,
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:focus,
+.navbar-custom .navbar-nav li a:active,
+.navbar-custom .navbar-nav li.active a {
+  color: rgba(43, 99, 38, 1);
+}
+
+.btn-primary {
+  border: 1px solid rgba(43, 99, 38, 1) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary.active.focus, .btn-primary.active:focus, 
+.btn-primary.active:hover, .btn-primary:active.focus, 
+.btn-primary:active:focus, .btn-primary:active:hover, 
+.open>.dropdown-toggle.btn-primary.focus, 
+.open>.dropdown-toggle.btn-primary:focus, 
+.open>.dropdown-toggle.btn-primary:hover {
+  background-color: rgba(43, 99, 38, 1)!important;
+  border: 1px solid rgba(43, 99, 38, 1)!important;
+}
+
+.btn-shadow.btn-primary {
+  box-shadow: 1px 5px 9px rgba(43, 99, 38, 1);
+}
+
+
+
+/*======= Responsive ======*/
+@media (min-width: 768px) {
+    .nav-custom-left {
+		margin-left: 5%;
+	}
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .contact-page .col-sm-6 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-custom {
+        -moz-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+  }
+  .screen-space {
+    margin: 0px auto 50px auto;
+  }
+  .feature-detail {
+    padding: 0px 0px 50px 30px !important;
+  }
+  .footer h5 {
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .blog-wrapper .blog-item {
+    width: 50%;
+  }
+  .navbar-custom .navbar-nav li a {
+    font-size: 12px;
+  }
+  .blog-detail-box {
+  padding-right: 0px;
+}
+}
+@media only screen and (min-width: 767px) and (max-width: 991px){
+  
+}
+@media (max-width: 767px) {
+  .blog-wrapper .blog-item {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  }
+  .logo {
+    margin-top: 7px;
+  }
+  .blog-detail-box {
+  padding-right: 0px;
 }
-
-.card{
-    position: relative;
-    flex: 1;
-    max-width: 300px;
-    height: 140px;
-    background-color: #444;
-    margin: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon{
-    font-size: 32px;
-    color: #ea8685;
-    transition: .3s linear;
-}
-
-.card:hover .icon{
-    transform: scale(4);
-    opacity: 0;
-}
-
-.card-content h3,
-.card-content span{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    opacity: 0;
-}
-
-.card-content h3{
-    top: 20px;
-    text-transform: uppercase;
-    color: #ea8685;
-}
-
-.card-content span{
-    bottom: 20px;
-    color: #fff;
-    font-weight: 500;
-}
-
-.card:hover h3{
-    opacity: 1;
-    top: 46px;
-    transition: .3s linear .3s;
-}
-
-.card:hover span{
-    opacity: 1;
-    bottom: 46px;
-    transition: .3s linear .3s;
-}
-
-
-@media screen and (max-width:900px){
-    .card{
-        flex: 100%;
-        max-width: 500px;
-    }
 }

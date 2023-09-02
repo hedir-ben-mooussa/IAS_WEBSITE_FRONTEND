@@ -1,0 +1,13 @@
+<div class="container mx-5 my-5 ">
+  <div class="d-flex justify-content-center">  
+    
+    <h2 style="color: green;" class="pt-1 pb-3">Activities hosted by IEEE </h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let e of events">
+      <app-card [event]="e"  ></app-card>
+     
+    </div>
+ 
+  </div>
+</div>
