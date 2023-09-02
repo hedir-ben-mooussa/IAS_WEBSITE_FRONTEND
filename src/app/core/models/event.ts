@@ -1,5 +1,7 @@
 export class Event {
     postId: number
     imageUrl: string;
-    tittle: string
+    title: string
+    date:Date;
+    description:string
 }
