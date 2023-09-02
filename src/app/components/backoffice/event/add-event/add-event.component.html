@@ -1,0 +1,101 @@
+<div class="card m-4">
+  <div class="p-4">
+    <h4 class="py-2">Create event</h4>
+    <form [formGroup]="addeventForm">
+      <div class="mb-3">
+        <label  class="form-label">Post Title</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="title"
+        />
+        <!--err message-->
+        <div
+          *ngIf="
+            addeventForm.controls['title'].invalid &&
+            (addeventForm.controls['title'].dirty ||
+              addeventForm.controls['title'].touched)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="addeventForm.controls['title'].hasError('required')">
+            <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+            Please enter the post title
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Image Url</label>
+        <input
+          type="text"
+          class="form-control"
+          id="imageUrl"
+          formControlName="imageUrl"
+        />
+        <!--err message-->
+        <div
+          *ngIf="
+            addeventForm.controls['imageUrl'].invalid &&
+            (addeventForm.controls['imageUrl'].dirty ||
+              addeventForm.controls['imageUrl'].touched)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="addeventForm.controls['imageUrl'].hasError('required')">
+            <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+            Please enter the image url
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Date</label><br/>
+        <input type="date" id="d" formControlName="date" />
+        <!--err message-->
+        <div
+          *ngIf="
+            addeventForm.controls['date'].invalid &&
+            (addeventForm.controls['date'].dirty ||
+              addeventForm.controls['date'].touched)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="addeventForm.controls['date'].hasError('required')">
+            <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+            date is required
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea
+          type="text"
+          class="form-control"
+          formControlName="description"
+        ></textarea>
+        <!--err message-->
+        <div
+          *ngIf="
+            addeventForm.controls['description'].invalid &&
+            (addeventForm.controls['description'].dirty ||
+              addeventForm.controls['description'].touched)
+          "
+          class="text-danger"
+        >
+          <div
+            *ngIf="addeventForm.controls['description'].hasError('required')"
+          >
+            <i class="fa-solid fa-triangle-exclamation fa-beat"></i>
+
+            description is required
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between py-2">
+        <button type="button" class="btn btn-primary" (click)="addEvent()">Add Event</button>
+        <a routerLink="/adminpanel/events" class="btn btn-success">Back</a>
+      </div>
+    </form>
+  </div>
+</div>
