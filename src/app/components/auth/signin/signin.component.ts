@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl, Form } from '@angular/forms';
+import { Router, RouterConfigOptions } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
@@ -13,7 +15,9 @@ export class SigninComponent implements OnInit {
   signinForm: FormGroup
   signupForm: FormGroup
   constructor(private formbuilder: FormBuilder,
-    private userService: UserService) { }
+    private userService: UserService,
+    private router:Router,
+    private toasteer:ToastrService) { }
 
   ngOnInit() {
 
@@ -52,7 +56,6 @@ export class SigninComponent implements OnInit {
     // ()=>{
     //arrow function
     // }
-    console.log("form",this.signupForm.value)
     this.userService.create(this.signupForm.value).subscribe(
       {
         //next used when subscribtion return something
@@ -66,6 +69,18 @@ export class SigninComponent implements OnInit {
 
   }
 
+
+  login(){
+    this.userService.login(this.signinForm.value).subscribe((res)=>{
+      if(res){
+        this.toasteer.success("welcome back","Logged In");
+        this.router.navigate(['/home']);
+      }else{
+        this.toasteer.error("Invalid credential","Logged in failed");
+
+      }
+    })
+  }
 
 
 }

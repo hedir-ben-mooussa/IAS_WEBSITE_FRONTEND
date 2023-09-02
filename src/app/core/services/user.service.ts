@@ -16,6 +16,10 @@ export class UserService {
     //backtick ``
     return this.http.post(`${this.url}/user/adduser`, user);
   }
+
+  login(form:any){
+    return this.http.post(`${this.url}/user/login`, form);
+  }
   getallUsers(){
     return this.http.get(`${this.url}/user/getAll`);
   }
