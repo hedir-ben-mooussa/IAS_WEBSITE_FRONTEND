@@ -2,7 +2,7 @@
 <div id="top" align="center">
 <br/>
   <p align="center">
-  <img src="/src/assets/iaslogo.png" alt="logo" width="70%" height="300px" />
+  <img src="/src/assets/iaslogo.png" alt="logo" width="50%" height="330px" /><br/>
     This is the official IEEE IAS app documentation <br/>
   </p>
  </div>
